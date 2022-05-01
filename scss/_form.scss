@@ -1,0 +1,117 @@
+.form{
+  padding-top: 10rem;
+  margin-bottom: 10rem;
+  &__container{
+    background-image: url(../image/7/form_bg.jpg);
+    border-radius: 50px 0px;
+    position: relative;
+    padding: 5.1rem 6.7rem;
+    @extend .flex-aic-jcsb;
+  }
+  &__img{
+    max-width: 46rem;
+    max-height: 46rem;
+    position: absolute;
+    top: -10rem;
+    left: 3.3rem;
+  }
+  &__wrap{
+    max-width: 50.4rem;
+    margin-left: auto;
+  }
+  &__title{
+    margin-bottom: 1.5rem;
+  }
+  &__desc{
+    margin-bottom: 3rem;
+  }
+  form{
+    background:var(--color__light);
+    border-radius: 1.3rem;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    input{
+      border: none;
+    }
+    .form__email::placeholder{
+      font-size: 1.3rem;
+      line-height: 1.5;
+      color: #ccc;
+      width: 100%;
+    }
+    .form__email{
+      width: 70%;
+    }
+    .form__btn{
+      background: var(--color__accent);
+      border-radius: 1.3rem;
+      border:1.5px solid transparent;
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      color: var(--color__light);
+      padding: 1.3rem 2.2rem;
+      transition: background-color 0.2s linear, color 0.2s linear;
+      &:hover{
+        background: var(--color__light);
+        color: var(--color__accent);
+        border:1.5px solid var(--color__accent);
+      }
+    }
+  }
+
+}
+@media(max-width:1100px){
+  .form{
+    &__container{
+      padding: 5.1rem 3.7rem;;
+    }
+    &__img{
+      max-width: 40rem;
+      max-height: 40rem;
+      top: -6rem;
+      left: 1rem;
+    }
+  }
+}
+@media(max-width:1000px){
+  .form{
+    padding-top: 6rem;
+    margin-bottom: 5rem;
+    &__wrap{
+      width: 50%;
+    }
+    &__desc{
+      font-size: 1.2rem;
+    }
+  }
+}
+@media(max-width:800px){
+  .form{
+    &__img{
+      max-width: 33rem;
+      max-height: 33rem;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+@media(max-width:700px){
+  .form{
+    &__img{
+      display: none;
+    }
+    &__container{
+      padding: 4rem 1.5rem;
+    }
+    &__wrap{
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .form form .form__btn{
+    font-size: 1.2rem;
+  }
+}
